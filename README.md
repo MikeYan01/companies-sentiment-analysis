@@ -1,17 +1,12 @@
 # File Structure   
 
 **corpus/ Text Corpus**   
----- pos_data.txt  Positive Corpus    
+---- pos_data.txt  Positive Corpus    
 ---- neg_data.txt  Negative Corpus   
 ---- pos_dict.txt  Positive Dictionary    
 ---- neg_dict.txt  Negative Dictionary      
-
-**midas_data/ Data Fetched From midas**     
----- media.csv Media Article Data       
----- raw_data.txt Raw Data   
----- seg_data.txt After Segmentation   
  
-**model/ Training Model**   
+**model/ Training Model**   
 ---- train_model.pkl Model Generated After Training      
 
 **src/ Source Code**   
@@ -22,8 +17,7 @@
 ---- midas_util.py Tool Functions      
 ---- media_cluster.py Clustering    
 
-README.md     
-cluster.csv Clustering Result   
+README.md        
 
 # Run    
     · Run main.py to calculate each article's sentiment value     
@@ -32,4 +26,4 @@ cluster.csv Clustering Result
 # Result Explanation   
     · Each article will be finally judged as Positive, Neutral or Negative   
     · Blank articles are judges as 'Neutral'      
-    · In cluster.csv, the num_cluster is set as 10, which corresponds to 10 media evaluation levels
+    · In cluster.csv, the num_cluster is set as 10, which corresponds to 10 media evaluation levels

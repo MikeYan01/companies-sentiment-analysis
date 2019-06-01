@@ -75,7 +75,7 @@ if __name__ == "__main__":
         util = md.Util()
         df_media = util.qry2df(server, usr, pwd, dbname, qry_text)
 
-        # ********** 重新计算正、负向次数
+        # ********** Positive and negative news' count
         media_data = pd.read_csv('../midas_data/media.csv', dtype = {'company_id':str, 'publish_time':str, 'extend1':str})
         for i in range( len(df_media) ):
             current_company_id = str(df_media.iloc[i]['company_id'])
@@ -91,7 +91,7 @@ if __name__ == "__main__":
             df_media.loc[i, 'positive_cnt'] = len(pos_data)
             df_media.loc[i, 'negative_cnt'] = len(neg_data)
             
-        # ********** 生成聚类结果
+        # ********** Clustering result
         df_cluster = cluster_data(df_media)
         df_cluster.to_csv('../cluster.csv')
     print ('Program ends at: '+datetime.datetime.now().strftime("%Y%m%d %H:%M:%S")) 

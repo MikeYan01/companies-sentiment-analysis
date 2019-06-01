@@ -1,13 +1,13 @@
-#coding=utf-8
+# coding=utf-8
 import psycopg2
 
-# 连接数据库
-conn = psycopg2.connect(database="Market", user="mkt_reader",
-                        password="Mkt2016midas", host="awspostgres.midastouching.com", port="5432")
+# For privacy, the detailed information about database is hidden
+conn = psycopg2.connect(database="dbname", user="username",
+                         password="password", host="hostname", port="portname")
 cur = conn.cursor()
-cur.execute("SELECT cont_summary FROM media WHERE company_id = '000756';")
+cur.execute("SELECT column_name FROM table_name WHERE conditions happen;")
 
-# 写入原始数据
+# Write raw text to file
 row = cur.fetchone()
 count = 0
 f = open('../midas_data/raw_data.txt', 'w')
@@ -23,7 +23,7 @@ while row is not None:
     row = cur.fetchone()
 f.close()
 
-# 对原始数据进行分词，用于之后的语料库选取
+# Word segmentation
 import jieba
 import jieba.posseg
 import jieba.analyse
