@@ -1,3 +1,7 @@
+# Brief Introduction
+
+A program to conduct sentiment analysis on media reports about Chinese listed companies.
+
 # File Structure   
 
 **corpus/ Text Corpus**   
