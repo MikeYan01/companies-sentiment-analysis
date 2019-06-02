@@ -4,24 +4,22 @@ A program to conduct sentiment analysis on media reports about Chinese listed co
 
 # File Structure   
 
-**corpus/ Text Corpus**   
----- pos_data.txt  Positive Corpus    
----- neg_data.txt  Negative Corpus   
----- pos_dict.txt  Positive Dictionary    
----- neg_dict.txt  Negative Dictionary      
- 
-**model/ Training Model**   
----- train_model.pkl Model Generated After Training      
-
-**src/ Source Code**   
----- rawData.py Fetch Data & Segment Article   
----- svm.py Feature Extraction & Training   
----- dict.py Prediction Based on Dictionary    
----- main.py Calculate Each Article's Sentiment Value      
----- midas_util.py Tool Functions      
----- media_cluster.py Clustering    
-
-README.md        
+    .
+    ├── README.md
+    ├── corpus
+    │   ├── pos_data.txt    Positive Corpus
+    │   ├── neg_data.txt    Negative Corpus
+    │   ├── pos_dict.txt    Positive Dictionary
+    │   └── neg_dict.txt    Negative Dictionary
+    ├── model
+    │   └── train_model.pkl    Model Generated After Training
+    └── src
+        ├── rawData.py    Fetch Data & Segment Article
+        ├── svm.py    Feature Extraction & Training
+        ├── dict.py    Prediction Based on Dictionary
+        ├── main.py    Calculate Each Article's Sentiment Value
+        ├── midas_util.py     Tool Functions
+        └── media_cluster.py    Clustering
 
 # Run    
     · Run main.py to calculate each article's sentiment value     
